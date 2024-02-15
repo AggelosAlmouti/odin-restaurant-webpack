@@ -5,11 +5,37 @@ body {
     background-color: #1a1a1a;
     color: white;
     min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
 }
 
 nav {
-    position: sticky;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 4rem;
+}
+
+button {
+    border: 0;
+    background-color: #1a1a1a;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    
+}
+
+.main_image {
+    height: auto;
+    width: 20rem;
+    border-radius: 1rem;
+}
+
+.content {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    align-items: center;
 }
