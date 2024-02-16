@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
 
 body {
     font-family: Roboto Mono, sans-serif;
@@ -6,7 +6,7 @@ body {
     color: white;
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 10fr;
+    grid-template-columns: 1fr 5fr;
 }
 
 nav {
@@ -22,20 +22,30 @@ button {
     background-color: #1a1a1a;
     color: white;
     font-weight: bold;
+    transition: transform 0.3s;
 }
 
 button:hover {
-    
-}
-
-.main_image {
-    height: auto;
-    width: 20rem;
-    border-radius: 1rem;
+    cursor: pointer;
+    transform: translateY(-3px);
 }
 
 .content {
     display: flex;
     justify-content: center;
     align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-style: italic;
+}
+
+.title {
+    grid-row: 1/2;
+}
+
+.main_image {
+    height: auto;
+    max-width: 70%;
+    border-radius: 1rem;
+    border: 5px solid white;
 }
