@@ -39,20 +39,20 @@ button:hover {
     transform: translateY(-3px);
 }
 
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.home_content {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
     font-style: italic;
+    height: 100%;
 }
 
 .title {
     grid-row: 1/2;
 }
 
-.main_image {
+.home_image {
     height: auto;
     max-width: 70%;
     border-radius: 1rem;

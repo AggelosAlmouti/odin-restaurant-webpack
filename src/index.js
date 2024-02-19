@@ -1,36 +1,40 @@
 import css from './style.css';
 import cutSteakImage from './assets/cut_steak.jpg';
-import home from './home.js';
+import menu from './pages/menu.js';
+import about from './pages/about.js';
 
 //navbar
 const nav = document.querySelector('nav');
 
-const home_button = document.createElement('button');
-home_button.classList = 'home';
-home_button.innerHTML = 'Home';
-nav.appendChild(home_button);
+const homeButton = document.createElement('button');
+homeButton.classList = 'home';
+homeButton.innerHTML = 'home';
+nav.appendChild(homeButton);
 
-const menu_button = document.createElement('button');
-menu_button.classList = 'menu';
-menu_button.innerHTML = 'Menu';
-nav.appendChild(menu_button);
+const menuButton = document.createElement('button');
+menuButton.classList = 'menu';
+menuButton.innerHTML = 'Menu';
+nav.appendChild(menuButton);
 
-const about_button = document.createElement('button');
-about_button.classList = 'about';
-about_button.innerHTML = 'About';
-nav.appendChild(about_button);
+const aboutButton = document.createElement('button');
+aboutButton.classList = 'about';
+aboutButton.innerHTML = 'About';
+nav.appendChild(aboutButton);
 
-//content
+//home content
 const content = document.querySelector('.content');
+const homeContent = document.createElement('div');
+homeContent.classList = 'home_content';
+content.appendChild(homeContent);
 
-const mainImage = new Image();
-mainImage.src = cutSteakImage;
-mainImage.classList = 'main_image';
-content.appendChild(mainImage);
+const homeImage = new Image();
+homeImage.src = cutSteakImage;
+homeImage.classList = 'home_image';
+homeContent.appendChild(homeImage);
 
 const title = document.createElement('div');
 title.classList = 'title';
-content.appendChild(title);
+homeContent.appendChild(title);
 
 const titleH1 = document.createElement('h1');
 titleH1.innerHTML = 'Steak House';
@@ -39,3 +43,25 @@ title.appendChild(titleH1);
 const titleP = document.createElement('p');
 titleP.innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius consectetur!';
 title.appendChild(titleP);
+
+//tab browsing
+homeButton.addEventListener('click', () => {
+    if (content.hasChildNodes()) {
+        content.removeChild(content.children[0]);
+    }
+    content.appendChild(homeContent);
+})
+
+menuButton.addEventListener('click', () => {
+    if (content.hasChildNodes()) {
+        content.removeChild(content.children[0]);
+    }
+    menu();
+})
+
+aboutButton.addEventListener('click', () => {
+    if (content.hasChildNodes()) {
+        content.removeChild(content.children[0]);
+    }
+    about();
+})
