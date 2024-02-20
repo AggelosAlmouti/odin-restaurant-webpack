@@ -8,7 +8,7 @@ const nav = document.querySelector('nav');
 
 const homeButton = document.createElement('button');
 homeButton.classList = 'home';
-homeButton.innerHTML = 'home';
+homeButton.innerHTML = 'Home';
 nav.appendChild(homeButton);
 
 const menuButton = document.createElement('button');
