@@ -97,3 +97,34 @@ footer p {
     margin-bottom: 1rem;
     font-size: small;
 }
+
+.menu_content .dish_container {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, minmax(auto, 1fr));
+    gap: 2rem;
+}
+
+.menu_content .dish {
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_content .dish:hover {
+    box-shadow: 0 4px 10px -5px white;
+    cursor: pointer;
+}
+
+.dish img {
+    height: auto;
+    width: 10rem;
+    border-radius: 10px;
+}
+
+.dish .price {
+    align-self: flex-end;
+    color: yellow;
+}
